@@ -46,6 +46,7 @@
     "ffmpeg": "0.0.4",
     "pretty-ms": "3.1.0", 
     "canvas": "^1.6.11",
+    "canvas-constructor": "^3.1.0",
     "ffmpeg-binaries": "^3.2.2-3",
     "simple-youtube-api": "^5.0.2"
   }

@@ -11,6 +11,8 @@ const r1 = require('snekfetch');
 const Canvas = require("canvas");
 const jimp = require('jimp')
 const weather = require('weather-js');
+const pretty = require("pretty-ms");
+
 const prefix = "*";
 
   
@@ -307,7 +309,7 @@ client.on('roleCreate', role => {
 
 client.on('guildMemberAdd', member => {
 
-    const channel = member.guild.channels.find('name', 'ask');
+    const channel = member.guild.channels.find('name', 'chatt');
   
     const millis = new Date().getTime() - member.user.createdAt.getTime();
     const now = new Date();
@@ -319,7 +321,7 @@ client.on('guildMemberAdd', member => {
   
     const embed = new Discord.RichEmbed()
     
-    .setColor("#1f0707")
+    .setColor("BLACK")
     .setDescription(`**تاريخ دخولك للدسكورد منذ ${createdAt.toFixed(0)} يوم**`)
     .setAuthor(member.user.tag, member.user.avatarURL);
     channel.sendEmbed(embed);
@@ -328,15 +330,10 @@ client.on('guildMemberAdd', member => {
 });
 
 
-const {
-    readFile,
-    readFileSync
-} = require('fs-nextra');
+const { readFile, readFileSync } = require('fs-nextra');
 
 const cnvs = require("canvas");
-const {
-    get
-} = require('snekfetch');
+const { get } = require('snekfetch');
 const inv = JSON.parse(fs.readFileSync("./userD.json", "UTF8"))
 const invs = JSON.parse(fs.readFileSync("./invites.json", "UTF8"))
 const wait = require('util').promisify(setTimeout);
@@ -412,7 +409,7 @@ client.on('message', async message => {
         canvas.addRoundImage(bot, 7, 1, 29, 29, 25)
         canvas.setShadowColor("rgba(22, 22, 22, 1)") // This is a nice colour for a shadow.
         canvas.setShadowOffsetY(3) // Drop the shadow by 5 pixels.
-        canvas.setShadowBlur(03) // Blur the shadow by 10.
+        canvas.setShadowBlur(  3) // Blur the shadow by 10.
         canvas.save()
             .addRoundImage(ava, 320, 55, 78, 78, 39)
             .setTextAlign("center")
