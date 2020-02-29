@@ -11,7 +11,7 @@ const r1 = require('snekfetch');
 const Canvas = require("canvas");
 const jimp = require('jimp')
 const weather = require('weather-js');
-const prefix = "#";
+const prefix = "*";
 
   
 
@@ -337,7 +337,7 @@ const cnvs = require("canvas");
 const {
     get
 } = require('snekfetch');
-let inv = JSON.parse(fs.readFileSync("./userD.json", "UTF8"))
+const inv = JSON.parse(fs.readFileSync("./userD.json", "UTF8"))
 const invs = JSON.parse(fs.readFileSync("./invites.json", "UTF8"))
 const wait = require('util').promisify(setTimeout);
 
