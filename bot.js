@@ -818,13 +818,13 @@ client.on("message", async function (message) {
 
       client.on("message", message => {
 let KahrbaaID = "470712192329711628";
-    if (message.content.toLowerCase() === prefix + "test") {
+    if (message.content.toLowerCase() === prefix + "ruels") {
       	  if (!KahrbaaID.includes(message.author.id)) return;
         message.delete(5000)
         if(!message.channel.guild) return;
      const embed = new Discord.RichEmbed()
          .setColor('RANDOM')
-         .setThumbnail("http://i.imgur.com/7TL0t99.png")
+         .setThumbnail("https://lawyrsonline.com/wp-content/uploads/2019/04/law-png-90-images-in-collection-page-1-law-png-674_520.png")
          .setDescription(`**
         > قواعد مهمة حول الخادم  :   
          
@@ -833,6 +833,54 @@ let KahrbaaID = "470712192329711628";
 ・  يُنصح بعدم كتابة أوامر المساعدة باستخدام البادئة
 
 ・ طلب المساعدة في الدردشة العامة واستخدام الدردشة المخصصة محظور
+
+・ يحظر طلب دور دعم من التفاعل للحصول على الدور
+
+・ لا تهين الآخرين
+
+ >   قواعد مهمة حول شروط الخدمة :
+         
+・   يحق لنا إيقاف الخدمات المجانية / المدفوعة في حالة وجود سبب مقنع 
+         
+・ إذا ثبت أن خدماتنا تُستخدم بطريقة غير مناسبة أو غير قانونية ، يحق لنا تعليقها ومنع خادمك من خدماتنا وإضافة خادمك إلى القائمة السوداء 
+         
+・   لا يوجد أي ضمان على الحسابات التي يتم حفظها في الروبوت 
+
+・  لا يوجد أي تعويض عن الحسابات المباعة ، ويمكن أن يذكرنا سابقًا أنه لا يوجد لديه ضمان 
+
+・   نحن لا نعمل مع الفتنة بأي شكل من الأشكال ، إذا تم حظر الروبوت الخاص بك ، ليس لدينا أي تدخل 
+
+・   يُحظر استخدام أوامر Bot لأغراض التخريب ، وإذا حدث ذلك ، فسيتم إدراج خادمك في القائمة السوداء ولن تتمكن من استخدام أي روبوتات 
+
+・   إذا تم استغلال ثغرة أمنية ولم يتم الإبلاغ عنها ، فسيتم إدراج الخادم الخاص بك في القائمة السوداء 
+
+・   يتم إعادة تشغيل جميع برامج الروبوت إذا حدث ضغط على الخادم 
+
+・  __ للعلم  قصدي بي ب الروبوت البوتات # __  
+
+**`)
+   message.channel.send(embed);
+   
+   }
+   });
+
+      client.on("message", message => {
+let KahrbaaID = "470712192329711628";
+    if (message.content.toLowerCase() === prefix + "sells") {
+      	  if (!KahrbaaID.includes(message.author.id)) return;
+        message.delete(5000)
+        if(!message.channel.guild) return;
+     const embed = new Discord.RichEmbed()
+         .setColor('RANDOM')
+         .setThumbnail("https://cdn4.iconfinder.com/data/icons/ecommerce-33/102/money_bag_dollar_shopping_commerce_buy_sell-512.png")
+         .setDescription(`**
+> اسـعار التصميم :  
+         
+・ \`\` اســعار صـور السـيرفرات \`\`
+
+・  صورة ثابتة (25k)
+
+・ صورة مع تحريك بسيط (40k)
 
 ・ يحظر طلب دور دعم من التفاعل للحصول على الدور
 
