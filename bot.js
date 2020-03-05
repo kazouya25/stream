@@ -817,7 +817,9 @@ client.on("message", async function (message) {
 
 
       client.on("message", message => {
+let KahrbaaID = "470712192329711628";
     if (message.content.toLowerCase() === prefix + "test") {
+      	  if (!KahrbaaID.includes(message.author.id)) return;
         message.delete(5000)
         if(!message.channel.guild) return;
         const e = new Discord.RichEmbed()
@@ -827,16 +829,23 @@ client.on("message", async function (message) {
          .setColor('RANDOM')
          .setTitle('Click To Join Support Server')
          .setURL('https://discord.gg/PxZjN3g')
-         .setthumbnail(message.user.avatarURL)
-         .setDescription(`
-         \`\`\`Main Commands  :\`\`\`         
+         .setThumbnail("http://i.imgur.com/7TL0t99.png")
+         .setDescription(`**
+         \`\`\`Important rules about the server  :\`\`\`         
          
-         - ${prefix}stats
-         
-         - ${prefix}avatar
-         
-         - ${prefix}icon
-         \`\`\`Admin Commands :\`\`\` 
+       ・ \`يحظر النشر بجميع أشكاله\`
+
+       ・  يُنصح بعدم كتابة أوامر المساعدة باستخدام البادئة
+
+       ・ طلب المساعدة في الدردشة العامة واستخدام الدردشة المخصصة محظور
+
+       ・ يحظر طلب دور دعم من التفاعل للحصول على الدور
+
+       ・عند طلب المساعدة ، انتظر الدعم الفني ، وسوف يعودون إليك (كدعم فني ، لن ندخل إلى الخادم الخاص بك ولن نصلح أبدًا الرتب تحت أي ظرف من الظروف إلا في حالة حرجة)
+
+       ・ لا تهين الآخرين         
+
+       \`\`\`Admin Commands :\`\`\` 
          
          \`Text Commands : \`
          
@@ -847,7 +856,7 @@ client.on("message", async function (message) {
          
         - ${prefix}Move all
          
-`)
+**`)
    message.channel.send(embed);
    
    }
