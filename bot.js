@@ -840,7 +840,7 @@ client.on('message', message => {
         })
 })
 
-
+    const k = ['https://cdn.glitch.com/bf9902bd-f554-41b5-a772-f405262b4a8d%2F5.png','https://cdn.glitch.com/bf9902bd-f554-41b5-a772-f405262b4a8d%2F4.png','https://cdn.glitch.com/bf9902bd-f554-41b5-a772-f405262b4a8d%2F6.png','https://cdn.glitch.com/bf9902bd-f554-41b5-a772-f405262b4a8d%2F1.png','https://cdn.glitch.com/bf9902bd-f554-41b5-a772-f405262b4a8d%2F3.png',''];
 client.on("message", message => {
   if (!message.channel.guild) return;
   if (message.content.startsWith(prefix + "color")) {
@@ -848,7 +848,7 @@ client.on("message", message => {
       return message.channel
         .send("**هذا الأمر فقط للسيرفرات**")
         .then(m => m.delete(5000));
-    message.channel.sendFile(`https://cdn.discordapp.com/attachments/647452214776037386/655398668236619777/PicsArt_12-14-04.19.57.jpg`).then(msg => {
+    message.channel.sendFile(`${k[Math.floor(Math.random() * k.length)]}`).then(msg => {
       msg.react("⬛").then(r => {
         msg.react("🟥").then(r => {
           msg.react("🟨").then(r => {
