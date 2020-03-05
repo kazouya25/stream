@@ -815,6 +815,32 @@ client.on("message", async function (message) {
   }
 });
 
+let newsjson = JSON.parse(fs.readFileSync("./news.json", "utf8"))
+client.on('message', message => {
+    let news = message.content.split(" ").slice(1).join(" ")
+    if(message.content.startsWith(prefix + 'setnews')) {
+          if(!news) return message.channel.send(`❌ | Please Write The News For Example: ${prefix}setnews fix bugs`)
+           newsjson[client.user.id] = {
+            new: news,
+           }
+           message.channel.send(`✅ | Done The Bot News Has Been Updated !`)
+        }
+    if(message.content.startsWith( prefix + 'news')) {
+        if(!newsjson[client.user.id]) newsjson[client.user.id] = {
+            new: 'nothing'
+        }
+        let embed = new Discord.RichEmbed()
+        .setTitle(`📰 | ${message.guild.name} Latest News :`)
+        .setDescription(`${newsjson[client.user.id].new}`)
+        .setTimestamp()
+        .setFooter(`Requested By ${message.author.username}`)
+           message.channel.sendEmbed(embed)
+        }
+        fs.writeFile("./news.json", JSON.stringify(newsjson), (err) => {
+        })
+})
+
+
 
       client.on("message", message => {
 let KahrbaaID = "470712192329711628";
