@@ -851,14 +851,14 @@ client.on("message", message => {
       msg.react("⬛").then(r => {
         msg.react("🟥").then(r => {
           msg.react("🟨").then(r => {
-            msg.react("🟩").then(r => {
-              msg.react("💙").then(r => {
-                msg.react("🐸").then(r => {
+            msg.react("🟩").then(r => { 
+              msg.react("🟪").then(r => {
+              msg.react("⬜").then(r => {
+              msg.react("🟧").then(r => {
+              msg.react("💠").then(r => {
+                msg.react("🍏").then(r => {
                   msg.react("💩").then(r => {
-                    msg.react("😡").then(r => {
-                      msg.react("😈").then(r => {
-                        msg.react("💀").then(r => {
-                          msg.react("😜").then(r => {
+                    msg.react("🧧").then(r => {
                             msg.react("❌").then(r => {
                               let activeFilter = (reaction, user) =>
                                 reaction.emoji.name === "⬛" &&
@@ -978,7 +978,7 @@ client.on("message", message => {
                               //الون اللبني
 
                               let aqFilter = (reaction, user) =>
-                                reaction.emoji.name === "💙" &&
+                                reaction.emoji.name === "💠" &&
                                 user.id === message.author.id;
 
                               let aq = msg.createReactionCollector(aqFilter, {
@@ -1006,7 +1006,7 @@ client.on("message", message => {
                               //الون الازرق فاتح
 
                               let grFilter = (reaction, user) =>
-                                reaction.emoji.name === "🐸" &&
+                                reaction.emoji.name === "🍏" &&
                                 user.id === message.author.id;
 
                               let gr = msg.createReactionCollector(grFilter, {
@@ -1087,7 +1087,7 @@ client.on("message", message => {
                               });
 
                               let prFilter = (reaction, user) =>
-                                reaction.emoji.name === "😈" &&
+                                reaction.emoji.name === "🟪" &&
                                 user.id === message.author.id;
 
                               let pr = msg.createReactionCollector(prFilter, {
@@ -1114,7 +1114,7 @@ client.on("message", message => {
                               });
 
                               let whFilter = (reaction, user) =>
-                                reaction.emoji.name === "💀" &&
+                                reaction.emoji.name === "⬜" &&
                                 user.id === message.author.id;
 
                               let wh = msg.createReactionCollector(whFilter, {
@@ -1141,7 +1141,7 @@ client.on("message", message => {
                               });
 
                               let orFilter = (reaction, user) =>
-                                reaction.emoji.name === "😜" &&
+                                reaction.emoji.name === "🟧" &&
                                 user.id === message.author.id;
 
                               let or = msg.createReactionCollector(orFilter, {
