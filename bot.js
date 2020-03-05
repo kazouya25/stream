@@ -909,6 +909,52 @@ let KahrbaaID = "470712192329711628";
    
    }
    });
+      client.on("message", message => {
+let KahrbaaID = "470712192329711628";
+    if (message.content.toLowerCase() === prefix + "sells-b") {
+      	  if (!KahrbaaID.includes(message.author.id)) return;
+        message.delete(5000)
+        if(!message.channel.guild) return;
+     const embed = new Discord.RichEmbed()
+         .setColor('RANDOM')
+         .setThumbnail("https://www.unocha.org/sites/unocha/files/Protection%20of%20civilians-18.png")
+         .setDescription(`**
+> اسـعار البوتات :  
+         
+・ \`\` بوتات السيرفرات   \`\`
+
+・ بوت ماين كرافت (5k)
+
+・ برودكست بوت (10k)
+
+・ بوت القيف اواي (14k)
+
+・ تيكت بوت (30k)
+
+・ \`\` اسعار البكجات  \`\`
+
+- البكج العادي  (150k)
+・ <#684914859812585482> <---
+
+- البكج المميزة
+・ <#684914859812585482> <---
+         
+>   شروط الخدمة :
+
+・ الدفع قبل العمل 
+・ يحق لك الحصول على تعديل خلال 2 ساعتين
+・ لا يمكن استرجاع الأموال بعد العمل والتسليم
+・ قد يتأخر تصميمك في حال تراكم الطلبات
+
+طرق الدفع :
+<:Probot:684994920645525530> \` Credits Probot \` 
+
+**`)
+   message.channel.send(embed);
+   
+   }
+   });
+
 
 
 client.login(process.env.BOT_TOKEN);
