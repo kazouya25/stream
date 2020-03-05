@@ -1,3 +1,14 @@
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://hypegroup.glitch.me/`);
+}, 280000);
+
 //======================================[Const]======================================
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -16,31 +27,6 @@ const pretty = require("pretty-ms");
 const prefix = "*";
 
   
-
-client.on('message', message => {
-    if (message.content.startsWith("رابط")) {
-          if(!message.channel.guild) return;
-
-  message.channel.createInvite({
-        thing: true,
-        maxUses: 100,
-        maxAge: 86400
-    }).then(invite =>
-      message.author.sendMessage(invite.url)
-    )
-    const embed = new Discord.RichEmbed()
-           .setColor('#36393e')
-        .setDescription(" تم ارسال الرابط بالخاص  ")
-      message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
-              const Embed11 = new Discord.RichEmbed()
-       .setColor('#36393e')
-        .setDescription(`**  Link : \n MaxUses : 100 **`)
-     
-      message.author.sendEmbed(Embed11)
-    }
-});
-
-
 //======================================[Client]======================================
 
 
@@ -51,7 +37,7 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', member=> {
   var guild = '471426842667253761';
-    member.addRole(member.guild.roles.find("name","Clients ,"));
+    member.addRole(member.guild.roles.find("name","Os ,"));
     });
     
     client.on('message', function(message) {
@@ -766,7 +752,7 @@ client.on("message", async function (message) {
                 if (user.text > 0) {
                     return `**#${++num} | <@${user.id}> XP: ${user.text} **`
                 }
-            }).join("n")}`;
+            }).join("\n")}`;
             var embed = new Discord.RichEmbed()
             .setAuthor("📋 | Guild Score Leaderboards", message.guild.iconURL)
   .setColor("13B813")
@@ -784,7 +770,7 @@ client.on("message", async function (message) {
                 if (user.voice > 0) {
                     return `**#${++num} | <@${user.id}> XP: ${user.voice}**`
                 }
-            }).join("n")}`;
+            }).join("\n")}`;
             var embed = new Discord.RichEmbed()
             .setAuthor("📋 | Guild Score Leaderboards", message.guild.iconURL)
   .setColor("13B813")
@@ -803,17 +789,19 @@ client.on("message", async function (message) {
                 if (user.text > 0) {
                     return `**#${++num} | <@${user.id}> XP: ${user.text} **`
                 }
-            }).join("n")}`;
+            }).join("\n")}`;
             num = 0;
             var voiceStr = `${topArray.sort((a, b) => b.voice - a.voice).slice(0, 5).filter(user => user.voice > 0 && message.guild.members.get(user.id)).map(function (user) {
                 if (user.voice > 0) {
                     return `**#${++num} | <@${user.id}> XP: ${user.voice} **`
                 }
-            }).join("n")}`;
+            }).join("\n")}`;
+            const more1 = "**:sparkles: More? `"+prefix+"top text`**";
+            const more2 = "**:sparkles: More? `"+prefix+"top voice`**";
             var embed = new Discord.RichEmbed()  
             .setAuthor("📋 | Guild Score Leaderboards", message.guild.iconURL)
-            .addField("**TOP 5 TEXT :speech_balloon:**", `${textStr}  nn  **:sparkles: More?** ${prefix}top text`, true)
-            .addField("**TOP 5 VOICE :microphone2:**", `${voiceStr} nn **:sparkles: More?** ${prefix}top voice`, true)
+            .addField("**TOP 5 TEXT :speech_balloon:**", `${textStr}    \n\n ${more1}`, true)
+            .addField("**TOP 5 VOICE :microphone2:**", `${voiceStr}   \n\n ${more2}`, true)
             .setFooter(message.author.tag, message.author.displayAvatarURL)
             .setTimestamp()
             .setColor("13B813");
