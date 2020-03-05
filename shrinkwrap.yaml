@@ -2,10 +2,11 @@ dependencies:
   array-sort: 1.0.0
   ascii-data-table: 2.1.1
   canvas: 1.6.13
+  canvas-constructor: 3.1.0
   child_process: 1.0.2
   common-tags: 1.7.2
   dateformat: 3.0.3
-  discord.js: 11.5.1
+  discord.js: 11.6.1
   discord.js-musicbot-addon: 1.10.3
   eris: 0.8.5
   express: 4.17.1
@@ -411,6 +412,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-m7UwTS4LVmmLLHWLCKPqqdqlijk=
+  /canvas-constructor/3.1.0:
+    dev: false
+    engines:
+      node: '>=8.6.0'
+    peerDependencies:
+      canvas: '*'
+    resolution:
+      integrity: sha512-S3CIisunkG6IqDIhCecPkm+xx5iTvsum3pDH3a96Tl7uS1h1Me1dfePwBjnt83I2OqtUopZoFYtTgjYpcNV2Aw==
   /canvas/1.6.13:
     dependencies:
       nan: 2.14.0
@@ -830,10 +839,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-HGF9wr2jy8oqoYTQclxZ49f5AO4=
-  /discord.js/11.5.1:
+  /discord.js/11.6.1:
     dependencies:
       long: 4.0.0
-      prism-media: 0.0.3
+      prism-media: 0.0.4
       snekfetch: 3.6.4
       tweetnacl: 1.0.3
       ws: 6.2.1
@@ -841,6 +850,7 @@ packages:
     engines:
       node: '>=6.0.0'
     peerDependencies:
+      '@discordjs/opus': ^0.1.0
       '@discordjs/uws': ^10.149.0
       bufferutil: ^4.0.0
       erlpack: discordapp/erlpack
@@ -849,7 +859,7 @@ packages:
       opusscript: ^0.0.6
       sodium: ^2.0.3
     resolution:
-      integrity: sha512-tGhV5xaZXE3Z+4uXJb3hYM6gQ1NmnSxp9PClcsSAYFVRzH6AJH74040mO3afPDMWEAlj8XsoPXXTJHTxesqcGw==
+      integrity: sha512-UV7rMQL2xtHtbHAaGwRlAhEepHjz3V0UEEoWd89QbLMu3MV0D7+xkYCaAhlxnvuJWbhPO8p49Anx8qJ/SrcdwQ==
   /dom-serializer/0.1.1:
     dependencies:
       domelementtype: 1.3.1
@@ -2115,7 +2125,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
-  /needle/2.3.2:
+  /needle/2.3.3:
     dependencies:
       debug: 3.2.6
       iconv-lite: 0.4.24
@@ -2125,7 +2135,7 @@ packages:
       node: '>= 4.4.x'
     hasBin: true
     resolution:
-      integrity: sha512-DUzITvPVDUy6vczKKYTnWc/pBZ0EnjMJnQ3y+Jo5zfKFimJs7S3HFCxCRZYB9FUZcrzUQr3WsmvZgddMEIZv6w==
+      integrity: sha512-EkY0GeSq87rWp1hoq/sH/wnTWgFVhYlnIkbJ0YJFfRgEFlz2RraCjBpFQ+vrEgEdp0ThfyHADmkChEhcb7PKyw==
   /negotiator/0.6.2:
     dev: false
     engines:
@@ -2169,7 +2179,7 @@ packages:
     dependencies:
       detect-libc: 1.0.3
       mkdirp: 0.5.1
-      needle: 2.3.2
+      needle: 2.3.3
       nopt: 4.0.1
       npm-packlist: 1.4.8
       npmlog: 4.1.2
@@ -2454,10 +2464,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-6crJx2v27lL+lC3ZxsQhMVOxKIE=
-  /prism-media/0.0.3:
+  /prism-media/0.0.4:
     dev: false
     resolution:
-      integrity: sha512-c9KkNifSMU/iXT8FFTaBwBMr+rdVcN+H/uNv1o+CuFeTThNZNTOrQ+RgXA1yL/DeLk098duAeRPP3QNPNbhxYQ==
+      integrity: sha512-dG2w7WtovUa4SiYTdWn9H8Bd4JNdei2djtkP/Bk9fXq81j5Q15ZPHYSwhUVvBRbp5zMkGtu0Yk62HuMcly0pRw==
   /process-nextick-args/1.0.7:
     dev: false
     resolution:
@@ -3585,6 +3595,7 @@ specifiers:
   array-sort: 1.0.0
   ascii-data-table: 2.1.1
   canvas: ^1.6.11
+  canvas-constructor: ^3.1.0
   child_process: ^1.0.2
   common-tags: 1.7.2
   dateformat: 3.0.3
