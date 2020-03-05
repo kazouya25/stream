@@ -848,10 +848,10 @@ client.on("message", message => {
         .send("**هذا الأمر فقط للسيرفرات**")
         .then(m => m.delete(5000));
     message.channel.sendFile(`https://cdn.discordapp.com/attachments/647452214776037386/655398668236619777/PicsArt_12-14-04.19.57.jpg`).then(msg => {
-      msg.react("🖤").then(r => {
-        msg.react("❤").then(r => {
-          msg.react("💛").then(r => {
-            msg.react("💚").then(r => {
+      msg.react("⬛").then(r => {
+        msg.react("🟥").then(r => {
+          msg.react("🟨").then(r => {
+            msg.react("🟩").then(r => {
               msg.react("💙").then(r => {
                 msg.react("🐸").then(r => {
                   msg.react("💩").then(r => {
@@ -861,7 +861,7 @@ client.on("message", message => {
                           msg.react("😜").then(r => {
                             msg.react("❌").then(r => {
                               let activeFilter = (reaction, user) =>
-                                reaction.emoji.name === "🖤" &&
+                                reaction.emoji.name === "⬛" &&
                                 user.id === message.author.id;
 
                               let active = msg.createReactionCollector(
@@ -892,7 +892,7 @@ client.on("message", message => {
                               //لون اسود
 
                               let y1Filter = (reaction, user) =>
-                                reaction.emoji.name === "❤" &&
+                                reaction.emoji.name === "🟥" &&
                                 user.id === message.author.id;
 
                               let y1 = msg.createReactionCollector(y1Filter, {
@@ -921,7 +921,7 @@ client.on("message", message => {
 
                               //لون احمر
                               let y2Filter = (reaction, user) =>
-                                reaction.emoji.name === "💛" &&
+                                reaction.emoji.name === "🟨" &&
                                 user.id === message.author.id;
 
                               let y2 = msg.createReactionCollector(y2Filter, {
@@ -950,7 +950,7 @@ client.on("message", message => {
                               //الون الاخضر
 
                               let dgFilter = (reaction, user) =>
-                                reaction.emoji.name === "💚" &&
+                                reaction.emoji.name === "🟩" &&
                                 user.id === message.author.id;
 
                               let dg = msg.createReactionCollector(dgFilter, {
