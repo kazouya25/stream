@@ -816,5 +816,42 @@ client.on("message", async function (message) {
 });
 
 
+      client.on("message", message => {
+    if (message.content.toLowerCase() === prefix + "test") {
+        message.delete(5000)
+        if(!message.channel.guild) return;
+        const e = new Discord.RichEmbed()
+        .setColor('#36393e')
+        .setTitle('Check Your DM’s')
+     const embed = new Discord.RichEmbed()
+         .setColor('RANDOM')
+         .setTitle('Click To Join Support Server')
+         .setURL('https://discord.gg/PxZjN3g')
+         .setthumbnail(message.user.avatarURL)
+         .setDescription(`
+         \`\`\`Main Commands  :\`\`\`         
+         
+         - ${prefix}stats
+         
+         - ${prefix}avatar
+         
+         - ${prefix}icon
+         \`\`\`Admin Commands :\`\`\` 
+         
+         \`Text Commands : \`
+         
+         - ${prefix}tempban
+         
+         
+         \`Voice Commands : \`
+         
+        - ${prefix}Move all
+         
+`)
+   message.channel.send(embed);
+   
+   }
+   });
+
 
 client.login(process.env.BOT_TOKEN);
