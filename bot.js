@@ -1454,4 +1454,41 @@ let KahrbaaID = "470712192329711628";
 
 
 
+const { Client } = require('discord.js');
+const ytdl  = require('ytdl-core');
+
+const url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+client.on('ready', () => {
+  console.log('discord.js client ready');
+});
+
+   const GUILDID = '662400157668605953'; // اي دي السيرفر  
+   const CHANNELID = '684955145448194087'; // اي دي الروم
+
+client.on('ready',async () => {
+    console.log('Got a song request!');
+    
+    voiceStay(GUILDID, CHANNELID);
+   function voiceStay(guildid, channelid) {
+    if(!guildid) throw new Error('Syntax: voiceStay function requires guildid');
+    if(!channelid) throw new Error('Syntax: voiceStay function requires channelid');
+
+    let guild = client.guilds.get(guildid);
+    const voiceChannel = guild.channels.get(channelid);;
+    if (!voiceChannel) {
+      return 
+    }
+    voiceChannel.join()
+      .then(connection => {
+        const stream = ytdl(url, { filter: 'audioonly' });
+        const dispatcher = connection.playStream(stream);
+        dispatcher.on('end', () => {
+          voiceChannel.leave();
+        });
+      });
+  }
+});
+
+
+
 client.login(process.env.BOT_TOKEN);
