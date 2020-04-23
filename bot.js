@@ -19,8 +19,8 @@ const moment = require('moment');
 const request = require('request');
 const cmd = require("node-cmd");
 const prefix = "*"; // البرافيكس
-   const GUILDID = '662400157668605953'; // اي دي السيرفر  
-   const CHANNELID = '684955145448194087'; // اي دي الروم
+   const GUILDID = ''; // اي دي السيرفر  
+   const CHANNELID = ''; // اي دي الروم
 //======================================[Client]======================================
 // CODE BY KAHRBAA كههربا
 
@@ -64,40 +64,6 @@ client.on('ready',async () => {
   
 //======================================[Commands]======================================
   
-
-
-client.on('message', message => {
-    if (message.content.startsWith( prefix + "avatar")) {
-        if(message.author.bot) return;// CODE BY KAHRBAA كههربا
-        if(!message.channel.guild) return message.reply(' Error : \` Guild Command \`');
-        var mentionned = message.mentions.users.first();
-    var x5bzm;
-      if(mentionned){
-          var x5bzm = mentionned;
-      
-        const embed = new Discord.RichEmbed()
-        .setColor("BLACK")
-        .setImage(`${x5bzm.avatarURL}`)
-        .addField('Requested By:', message.author.tag)
-      message.channel.sendEmbed(embed);
-      }
-    }// CODE BY KAHRBAA كههربا
-});
-client.on('message', message => {
-    if (message.content.startsWith( prefix + "avatar")) {
-        if(message.author.bot) return;
-        if(!message.channel.guild) return message.reply(' Error : \` Guild Command \`');
-        var mentionned = message.mentions.users.first();
-
- if (mentionned) return;
-          var x5bzm = message.author;
-      
-        const embed = new Discord.RichEmbed()
-        .setColor("BLACK")
-        .setImage(`${x5bzm.avatarURL}`)// CODE BY KAHRBAA كههربا
-      message.channel.sendEmbed(embed);
-    }
-});
 
 client.on('message', message => {
     if(message.content === prefix + 'guild'){
