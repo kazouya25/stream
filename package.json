@@ -1,7 +1,7 @@
 {
   "name": "quran24h",
   "version": "2.1.0",
-  "description": "-- By Kahrbaa --",
+  "description": "-- By virgel --",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
