@@ -37,6 +37,7 @@ dependencies:
   simple-youtube-api: 5.2.1
   snekfetch: 3.6.4
   sqlite: 2.9.3
+  stream: 0.0.2
   table: 4.0.3
   weather-js: 2.0.0
   youtube-info: 1.3.2
@@ -948,6 +949,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
+  /emitter-component/1.1.1:
+    dev: false
+    resolution:
+      integrity: sha1-Bl4tvtaVm/RwZ57avq95gdEAOrY=
   /encodeurl/1.0.2:
     dev: false
     engines:
@@ -3127,6 +3132,12 @@ packages:
       node: '>= 0.10.0'
     resolution:
       integrity: sha1-hDBgmNhf25kLn6MAsbPM9V6O8B0=
+  /stream/0.0.2:
+    dependencies:
+      emitter-component: 1.1.1
+    dev: false
+    resolution:
+      integrity: sha1-f1Nj8Ff2WSxVlfALyAon9c7B8O8=
   /string-template/0.2.1:
     dev: false
     resolution:
@@ -3671,6 +3682,7 @@ specifiers:
   simple-youtube-api: ^5.0.2
   snekfetch: ^3.6.4
   sqlite: ^2.9.1
+  stream: ^0.0.2
   table: 4.0.3
   weather-js: ^2.0.0
   youtube-info: ^1.3.2

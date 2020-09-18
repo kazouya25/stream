@@ -2,40 +2,39 @@ const http = require("http");
 const express = require("express");
 const app = express();
 app.get("/", (request, response) => {
-  response.sendStatus(200); 
+  response.sendStatus(200);
 });
 app.listen(process.env.PORT);
 setInterval(() => {
-  http.get(`http://animeqq.glitch.me/`);
+  http.get(`http://streamapg.glitch.me/`);
 }, 280000);
 
 //======================================[Const]======================================
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const bot = new Discord.Client();
-const ms = require("ms"); 
+const ms = require("ms");
 const fs = require("fs");
 const moment = require("moment");
 const request = require("request");
 const cmd = require("node-cmd");
 const devs = "713429811434881093";
 const prefix = "q"; // البرافيكس
-const GUILDID = "754658775251812512"; // اي دي السيرفر
-const CHANNELID = "754658775251812518"; // اي دي الروم
+const GUILDID = "722075865093111828"; // اي دي السيرفر
+const CHANNELID = "756586200881430699"; // اي دي الروم
 //======================================[Client]======================================
-
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setActivity("ِAPG مصمم خصيصا لسرفر ", { type: "WATCHING" });
 });
 const { Client } = require("discord.js");
-const ytdl = require("ytdl-core");  
-const url = "https://www.youtube.com/watch?v=M6z0Qql4-qo"; //  فديو الخاص ب القرأن الكريم كامل 
+const ytdl = require("ytdl-core");
+const url = ""; //  فديو الخاص ب القرأن الكريم كامل
 
 client.on("ready", async () => {
   console.log("تـم تشغيل القرأن الكريم");
-  
+
   voiceStay(GUILDID, CHANNELID);
   function voiceStay(guildid, channelid) {
     if (!guildid) throw new Error("ـاكد انك حطط ايدي السيرفر");
@@ -45,9 +44,9 @@ client.on("ready", async () => {
     const voiceChannel = guild.channels.get(channelid);
     if (!voiceChannel) {
       return;
-    } 
+    }
     voiceChannel.join().then(connection => {
-      const stream = ytdl(url, { filter: "audioonly" }); 
+      const stream = ytdl(url, { filter: "audioonly" });
       const dispatcher = connection.playStream(stream);
       dispatcher.on("end", () => {
         voiceChannel.leave();
@@ -68,7 +67,7 @@ client.on("message", message => {
     var heg = message.guild;
     const embed = new Discord.RichEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL)
-      .addField("GuidlOwner", message.guild.owner, true) 
+      .addField("GuidlOwner", message.guild.owner, true)
       .addField("Guild ID", message.guild.id, true)
       .addField(
         "Guild MemberCount",
@@ -94,7 +93,7 @@ client.on("message", message => {
       .addField("Guild Region", message.guild.region, true);
 
     message.channel.send(embed);
-  } 
+  }
 });
 
 client.on("message", message => {
@@ -104,7 +103,7 @@ client.on("message", message => {
       return message.reply(" Error : ` Guild Command `");
     message.channel.send({
       embed: new Discord.RichEmbed()
-        .setColor("BLACK") 
+        .setColor("BLACK")
         .addField(
           "Ping",
           [`${Date.now() - message.createdTimestamp}` + "MS"],
@@ -299,15 +298,6 @@ detail as possible. Our **Support Staff** will be here soon to help.To Answer Yo
   }
 });
 
-
-
-
-
 ///////////////////////////////////////
-
-
-
-
-
 
 client.login(process.env.BOT_TOKEN);
