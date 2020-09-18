@@ -21,7 +21,7 @@ const cmd = require("node-cmd");
 const devs = "713429811434881093";
 const prefix = "q"; // البرافيكس
 const GUILDID = "722075865093111828"; // اي دي السيرفر
-const CHANNELID = "756586200881430699"; // اي دي الروم
+const CHANNELID = "756612159815024680"; // اي دي الروم
 //======================================[Client]======================================
 
 client.on("ready", () => {
@@ -30,7 +30,7 @@ client.on("ready", () => {
 });
 const { Client } = require("discord.js");
 const ytdl = require("ytdl-core");
-const url = ""; //  فديو الخاص ب القرأن الكريم كامل
+const url = "https://www.youtube.com/playlist?list=PLADGDzR6i7oiBJCyAaamuWNSHXfWfbD4R"; //  فديو الخاص ب القرأن الكريم كامل
 
 client.on("ready", async () => {
   console.log("تـم تشغيل القرأن الكريم");
